@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+func main() {
+	a := make(map[int][]int)
+	a[1] = []int{1, 1, 1}
+	a[2] = []int{2}
+	copy(a[2], a[2][1:])
+	a[len(a[2])-1] = nil
+	a[2] = a[2][:len(a[2])-1]
+	fmt.Println(a[3])
+	fmt.Println(len(a[3]))
+
+}
