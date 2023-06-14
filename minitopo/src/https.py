@@ -16,7 +16,6 @@ from BaseHTTPServer import HTTPServer
 from SimpleHTTPServer import SimpleHTTPRequestHandler
 from OpenSSL import SSL
 
-
 class SecureHTTPServer(HTTPServer):
     def __init__(self, server_address, HandlerClass):
         BaseServer.__init__(self, server_address, HandlerClass)
